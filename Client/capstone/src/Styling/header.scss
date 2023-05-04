@@ -1,0 +1,36 @@
+.main__navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e3e6f3;
+  box-shadow: 0 5px 15px rgb(0, 0, 0, 0.06);
+  position: sticky;
+}
+
+.header__links {
+  display: flex;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  transition: 0.3s ease;
+  padding: 10px 20px;
+}
+.header__links:hover,
+.header__links:active {
+  color: #088178;
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  cursor: pointer;
+}
+.header__buttons--container {
+  list-style-type: none;
+  justify-content: flex-end;
+  padding: 0 10px;
+  background: none;
+}
+
+.header__logo {
+  background: none;
+}
