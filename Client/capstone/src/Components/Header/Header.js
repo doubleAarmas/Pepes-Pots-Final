@@ -1,6 +1,5 @@
 import "../../Styling/header.scss";
 import React from "react";
-import "../../Styling/header.scss";
 import Branding from "../../Images/Branding.png";
 import { NavLink } from "react-router-dom";
 import Cart from "../../Logos/icons8-add-shopping-cart-96.png";

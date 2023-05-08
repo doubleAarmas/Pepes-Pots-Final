@@ -1,0 +1,94 @@
+.hero__section--button {
+  background-image: url(../Images/button-background.png);
+}
+
+#product1 {
+  text-align: center;
+}
+
+#product1 .product-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  flex-wrap: wrap;
+}
+
+#product1 .product {
+  width: 23%;
+  min-width: 250px;
+  padding: 10px 12px;
+  border: 1px solid #cce7d0;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.04);
+  margin: 15px 0;
+  transition: 0.2 ease;
+  position: relative;
+}
+
+#product1 .product:hover {
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.08);
+}
+
+#product1 .product img {
+  width: 100%;
+  border-radius: 20px;
+  max-block-size: 350px;
+}
+
+#product1 .product .description {
+  text-align: start;
+  padding: 10px 0;
+}
+
+#product1 .product .description span {
+  color: #606063;
+  font-size: 12px;
+}
+
+#product1 .product .description h5 {
+  padding-top: 7px;
+  color: #1a1a1a;
+  font-size: 14px;
+}
+
+/* only used for the review stars if implemented
+#product1 .product .description i{
+    font-size: 12px;
+    color: rgb(243, 181, 25);
+} */
+
+#product1 .product .description h4 {
+  padding-top: 7px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #088178;
+}
+
+/* #product1 .product button {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #e8f6ea;
+    font-weight: 500;
+    color: #088178;
+    border: 1px solid #cce7d0;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+} */
+
+#product1 .product .cart {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50px;
+  background-color: #e8f6ea;
+  font-weight: 600;
+  color: #088178;
+  border: 1px solid #cce7d0;
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+}
