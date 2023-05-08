@@ -1,5 +1,5 @@
 import React from "react";
-import "../../Styling/hero.scss";
+import "../../Styling/Hero.scss";
 import Kale from "../../Images/Kale-bowl.jpeg";
 import Basil from "../../Images/Basil-Bowl.jpg";
 import Lettuce from "../../Images/Lettuce-bowl.jpg";
@@ -14,7 +14,7 @@ function Hero() {
   return (
     <section id="product1" class="section-p1">
       <h2>New Arrivals</h2>
-      <p>Shiping available to any location in Florida</p>
+      <p>Shiping is currently limited to Orlando, Florida</p>
       <div class="product-container">
         <div class="product">
           <img src={Kale} alt="Kale bowl" />
