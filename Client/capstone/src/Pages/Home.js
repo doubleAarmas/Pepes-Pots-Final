@@ -4,6 +4,7 @@ import MiniHero from "../Components/miniHero/miniHero";
 import CustomBanner from "../Components/CustomBanner/CustomBanner";
 import FeaturedItems from "../Components/FeaturedItems/FeaturedItems";
 import Newsletter from "../Components/Newsletter/Newsletter";
+import Footer from "../Components/Footer/Footer";
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
       <MiniHero />
       <FeaturedItems />
       <Newsletter />
+      <Footer />
     </div>
   );
 }

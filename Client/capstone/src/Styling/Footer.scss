@@ -1,0 +1,52 @@
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px 40px;
+}
+
+.footer__column--container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.footer__subheader {
+  font-size: 14px;
+  padding-bottom: 20px;
+  &--contact {
+    margin-top: 0;
+  }
+}
+
+.footer__text {
+  font-size: 13px;
+  margin-bottom: 10px;
+  margin: 0 0 8px 0;
+}
+
+.follow {
+  margin-top: 20px;
+}
+
+footer .follow i {
+  color: #465b52;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+footer .row img {
+  border-radius: 6px;
+  margin: 10px 0 15px 0;
+}
+
+footer .follow i:hover,
+footer a:hover {
+  color: #088178;
+}
+
+footer .copyright {
+  width: 100%;
+  text-align: center;
+}
