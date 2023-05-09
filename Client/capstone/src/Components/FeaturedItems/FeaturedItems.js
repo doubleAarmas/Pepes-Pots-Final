@@ -3,11 +3,10 @@ import "../../Styling/Hero.scss";
 import Shopping from "../../Logos/icons8-add-shopping-cart-96.png";
 import { products } from "../ProductData/ProductData";
 
-function Hero() {
+function FeaturedItems() {
   return (
     <section id="product1" className="section-p1">
-      <h2>New Arrivals</h2>
-      <p>Shipping is currently limited to the Orlando, FL area.</p>
+      <h2>Featured Items</h2>
       <div className="product-container">
         {products.map((product) => (
           <div className="product" key={product.id}>
@@ -27,4 +26,4 @@ function Hero() {
   );
 }
 
-export default Hero;
+export default FeaturedItems;
