@@ -9,8 +9,8 @@ function Home() {
   return (
     <div>
       <Hero />
-      <MiniHero />
       <CustomBanner />
+      <MiniHero />
       <FeaturedItems />
       <Newsletter />
     </div>
