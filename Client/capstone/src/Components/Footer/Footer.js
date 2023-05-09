@@ -54,9 +54,21 @@ function Footer() {
         <div className="column payments">
           <h4 className="footer__subheader">Secured Payment Gateways</h4>
           <div className="row">
-            <img src={Discover} alt="Discover card" />
-            <img src={Visa} alt="Visa credit card" />
-            <img src={American} alt="American Express card" />
+            <img
+              src={Discover}
+              alt="Discover card"
+              className="footer__payments"
+            />
+            <img
+              src={Visa}
+              alt="Visa credit card"
+              className="footer__payments"
+            />
+            <img
+              src={American}
+              alt="American Express card"
+              className="footer__payments"
+            />
           </div>
         </div>
 
