@@ -1,44 +1,58 @@
-export const products = [
+const products = [
   {
     id: 1,
-    name: "Kale Bowls",
+    title: "Kale Bowls",
     image: require("../../Images/Kale-bowl.jpeg"),
     price: 15,
   },
   {
     id: 2,
-    name: "Bok-Choy Bowls",
+    title: "Bok-Choy Bowls",
     image: require("../../Images/bok-choy-bowl.jpg"),
     price: 15,
   },
   {
     id: 3,
-    name: "Lettuce Bowls",
+    title: "Lettuce Bowls",
     image: require("../../Images/Lettuce-bowl.jpg"),
     price: 15,
   },
   {
     id: 4,
-    name: "Mint Bowls",
+    title: "Mint Bowls",
     image: require("../../Images/Mint-bowl.jpg"),
     price: 15,
   },
   {
     id: 5,
-    name: "Basil Bowls",
+    title: "Basil Bowls",
     image: require("../../Images/Basil-Bowl.jpg"),
     price: 15,
   },
   {
     id: 6,
-    name: "Growing Bowls",
+    title: "Growing Bowls",
     image: require("../../Images/wooden-bowl.png"),
     price: 15,
   },
   {
     id: 7,
-    name: "Spinach Bowls",
+    title: "Spinach Bowls",
     image: require("../../Images/spinach-bowl.jpg"),
     price: 15,
   },
 ];
+
+function getProductData(id) {
+  let productData = products.find((product) => product.id === id);
+
+  if (productData == undefined) {
+    console.log("Product data does not exist for ID: " + id);
+    // adding the return statement here as well to make it easier to read
+    return undefined;
+  }
+
+  return productData;
+}
+
+export { products, getProductData };

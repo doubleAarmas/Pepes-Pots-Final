@@ -10,10 +10,10 @@ function FeaturedItems() {
       <div className="product-container">
         {products.map((product) => (
           <div className="product" key={product.id}>
-            <img src={product.image} alt={product.name} />
+            <img src={product.image} alt={product.title} />
             <div className="description">
               <span>Branding</span>
-              <h5>{product.name}</h5>
+              <h5>{product.title}</h5>
               <h4>{product.price}</h4>
             </div>
             <button type="submit">

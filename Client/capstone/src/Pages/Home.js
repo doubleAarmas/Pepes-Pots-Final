@@ -9,10 +9,10 @@ import Footer from "../Components/Footer/Footer";
 function Home() {
   return (
     <div>
-      <Hero />
+      {/* <Hero /> */}
       <CustomBanner />
       <MiniHero />
-      <FeaturedItems />
+      {/* <FeaturedItems /> */}
       <Newsletter />
       <Footer />
     </div>
