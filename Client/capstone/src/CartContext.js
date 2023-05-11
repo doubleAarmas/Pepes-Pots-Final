@@ -63,13 +63,11 @@ export function CartProvider({ children }) {
       deleteFromCart(id);
     } else {
       setCartProducts(
-        setCartProducts(
-          cartProducts.map(
-            (product) =>
-              product.id === id //if condition
-                ? { ...product, quantity: product.quantity - 1 } //if statement is true
-                : product // if statement is false
-          )
+        cartProducts.map(
+          (product) =>
+            product.id === id //if condition
+              ? { ...product, quantity: product.quantity - 1 } //if statement is true
+              : product // if statement is false
         )
       );
     }

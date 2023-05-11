@@ -1,6 +1,10 @@
 import { Row, Col } from "react-bootstrap";
 import { products } from "../Components/ProductData/ProductData";
 import ProductCard from "../Components/ProductCard/ProductCard";
+import MiniHero from "../Components/miniHero/miniHero";
+import CustomBanner from "../Components/CustomBanner/CustomBanner";
+import Newsletter from "../Components/Newsletter/Newsletter";
+import Footer from "../Components/Footer/Footer";
 
 function Store() {
   return (
@@ -16,6 +20,10 @@ function Store() {
           </Col>
         ))}
       </Row>
+      <CustomBanner />
+      <MiniHero />
+      <Newsletter />
+      <Footer />
     </>
   );
 }
