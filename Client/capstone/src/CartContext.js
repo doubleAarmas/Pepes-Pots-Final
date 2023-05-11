@@ -31,6 +31,7 @@ export function CartProvider({ children }) {
   //adding items to the cart
   function addOneToCart(id) {
     const quantity = getProductQuantity(id);
+    console.log(quantity);
 
     if (quantity === 0) {
       //product is not in the cart
@@ -59,17 +60,15 @@ export function CartProvider({ children }) {
   function removeOneFromCart(id) {
     const quantity = getProductQuantity(id);
 
-    if (quantity == 1) {
+    if (quantity === 1) {
       deleteFromCart(id);
     } else {
       setCartProducts(
-        setCartProducts(
-          cartProducts.map(
-            (product) =>
-              product.id === id //if condition
-                ? { ...product, quantity: product.quantity - 1 } //if statement is true
-                : product // if statement is false
-          )
+        cartProducts.map(
+          (product) =>
+            product.id === id //if condition
+              ? { ...product, quantity: product.quantity - 1 } //if statement is true
+              : product // if statement is false
         )
       );
     }

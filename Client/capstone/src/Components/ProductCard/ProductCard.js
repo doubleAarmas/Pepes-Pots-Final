@@ -10,6 +10,7 @@ function ProductCard(props) {
   return (
     <Card>
       <Card.Body>
+        <Card.Img variant="top" src={product.image} />
         <Card.Title>{product.title}</Card.Title>
         <Card.Text>${product.price}</Card.Text>
         {productQuantity > 0 ? (
