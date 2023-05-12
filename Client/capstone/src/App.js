@@ -15,6 +15,16 @@ import Store from "./Pages/Store";
 import CartProvider from "./CartContext";
 
 function App() {
+  const [backendData, setBackendData] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("/products")
+      .then((response) => {
+        setBackendData(response.data);
+      })
+      .catch((error) => console.error(error));
+  }, []);
   // const [backendData, setBackendData] = useState([{}]);
 
   // const products = async () => {
@@ -31,29 +41,33 @@ function App() {
   // }, []);
   // localhost:3000 -> Home
   // localhost:3000/success -> success
-  return (
-    <CartProvider>
-      <div>
-        <BrowserRouter>
-          {/* bootstrap stuff */}
-          <Container>
-            <NavbarComponent></NavbarComponent>
-          </Container>
-          <Header />
-          <Routes>
-            <Route index element={<Store />} />
-            <Route path="success" element={<Success />} />
-            <Route path="cancel" element={<Cancel />} />
-            <Route path="contact" element={<Contact />} />
+  if (!backendData) {
+    return "Loading...";
+  } else {
+    return (
+      <CartProvider products={backendData}>
+        <div>
+          <BrowserRouter>
+            {/* bootstrap stuff */}
+            <Container>
+              <NavbarComponent></NavbarComponent>
+            </Container>
+            <Header />
+            <Routes>
+              <Route index element={<Store products={backendData} />} />
+              <Route path="success" element={<Success />} />
+              <Route path="cancel" element={<Cancel />} />
+              <Route path="contact" element={<Contact />} />
 
-            {/* <Route exact path="/" element={<Navigate to="/Pepe's_Home" />} />
+              {/* <Route exact path="/" element={<Navigate to="/Pepe's_Home" />} />
           <Route path="/Pepe's_Home" element={<Home />} /> */}
-          </Routes>
-          {/* <Footer /> */}
-        </BrowserRouter>
-      </div>
-    </CartProvider>
-  );
+            </Routes>
+            {/* <Footer /> */}
+          </BrowserRouter>
+        </div>
+      </CartProvider>
+    );
+  }
 }
 
 export default App;
