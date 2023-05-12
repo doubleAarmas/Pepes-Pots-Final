@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "Kale Bowls",
+    "image": "http://localhost:8080/images/Kale-bowl.jpeg",
+    "price": 15
+  },
+  {
+    "id": 2,
+    "title": "Bok-Choy Bowls",
+    "image": "http://localhost:8080/images/bok-choy-bowl.jpg",
+    "price": 15
+  },
+  {
+    "id": 3,
+    "title": "Lettuce Bowls",
+    "image": "http://localhost:8080/images/Lettuce-bowl.jpg",
+    "price": 15
+  },
+  {
+    "id": 4,
+    "title": "Mint Bowls",
+    "image": "http://localhost:8080/images/Mint-bowl.jpg",
+    "price": 15
+  },
+  {
+    "id": 5,
+    "title": "Basil Bowls",
+    "image": "http://localhost:8080/images/Basil-Bowl.jpeg",
+    "price": 15
+  },
+  {
+    "id": 6,
+    "title": "Growing Bowls",
+    "image": "http://localhost:8080/images/wooden-bowl.png",
+    "price": 15
+  },
+  {
+    "id": 7,
+    "title": "Spinach Bowls",
+    "image": "http://localhost:8080/images/spinach-bowl.jpg",
+    "price": 15
+  }
+]
