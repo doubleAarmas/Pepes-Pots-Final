@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { products, getProductData } from "./Components/ProductData/ProductData";
+import { getProductData } from "./Components/ProductData/ProductData";
 
 export const CartContext = createContext({
   items: [],
@@ -11,7 +11,7 @@ export const CartContext = createContext({
   getTotalCost: () => {},
 });
 
-export function CartProvider({ children }) {
+export function CartProvider(props, { children }) {
   const [cartProducts, setCartProducts] = useState([]);
 
   // stored in the cart is {id:1, quantity: 2}
@@ -59,7 +59,7 @@ export function CartProvider({ children }) {
   function removeOneFromCart(id) {
     const quantity = getProductQuantity(id);
 
-    if (quantity == 1) {
+    if (quantity === 1) {
       deleteFromCart(id);
     } else {
       setCartProducts(
@@ -79,7 +79,7 @@ export function CartProvider({ children }) {
 
     setCartProducts((cartProducts) =>
       cartProducts.filter((currentProduct) => {
-        return currentProduct.id != id;
+        return currentProduct.id !== id;
       })
     );
   }
@@ -87,7 +87,7 @@ export function CartProvider({ children }) {
   function getTotalCost() {
     let totalCost = 0;
     cartProducts.map((cartItem) => {
-      const productData = getProductData(cartItem.id);
+      const productData = getProductData(cartItem.id, props.products);
       totalCost += productData.price * cartItem.quantity;
     });
     return totalCost;

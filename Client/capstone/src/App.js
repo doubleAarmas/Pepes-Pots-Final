@@ -19,34 +19,36 @@ function App() {
   useEffect(() => {
     axios
       .get("/products")
-      .then((response) => response.json())
-      .then((data) => {
-        setBackendData(data);
+      .then((response) => {
+        setBackendData(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
       });
   }, []);
   // localhost:3000 -> Home
   // localhost:3000/success -> success
   return (
-    <CartProvider>
-      <div>
-        <BrowserRouter>
-          {/* bootstrap stuff */}
-          <Container>
-            <NavbarComponent></NavbarComponent>
-          </Container>
-          <Header />
-          <Routes>
-            <Route index element={<Store />} />
-            <Route path="success" element={<Success />} />
-            <Route path="cancel" element={<Cancel />} />
+    // <CartProvider products={backendData}>
+    <div>
+      <BrowserRouter>
+        {/* bootstrap stuff */}
+        <Container>
+          <NavbarComponent></NavbarComponent>
+        </Container>
+        <Header />
+        <Routes>
+          <Route index element={<Store products={backendData} />} />
+          <Route path="success" element={<Success />} />
+          <Route path="cancel" element={<Cancel />} />
 
-            {/* <Route exact path="/" element={<Navigate to="/Pepe's_Home" />} />
+          {/* <Route exact path="/" element={<Navigate to="/Pepe's_Home" />} />
           <Route path="/Pepe's_Home" element={<Home />} /> */}
-          </Routes>
-          {/* <Footer /> */}
-        </BrowserRouter>
-      </div>
-    </CartProvider>
+        </Routes>
+        {/* <Footer /> */}
+      </BrowserRouter>
+    </div>
+    // </CartProvider>
   );
 }
 

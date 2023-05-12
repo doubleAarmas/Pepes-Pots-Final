@@ -20,7 +20,7 @@ function NavbarComponent() {
     <>
       <Navbar expand="sm">
         <Navbar.Brand href="/">
-          <img src={Logo} />
+          <img src={Logo} alt="Logo" />
         </Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
