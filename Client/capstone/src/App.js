@@ -18,12 +18,15 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("/products")
-      .then((response) => response.json())
-      .then((data) => {
-        setBackendData(data);
+      .get(" http://localhost:3000/products")
+      .then((response) => {
+        setBackendData(response.data); // Use response.data directly
+      })
+      .catch((error) => {
+        console.log(error);
       });
   }, []);
+
   // localhost:3000 -> Home
   // localhost:3000/success -> success
   return (

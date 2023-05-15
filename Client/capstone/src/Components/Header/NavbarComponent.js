@@ -3,6 +3,7 @@ import { useContext, useState } from "react";
 import { CartContext } from "../../CartContext";
 import CartProduct from "../CartProduct/CartProduct";
 import Logo from "../../Images/Branding.png";
+import axios from "axios";
 
 function NavbarComponent() {
   const cart = useContext(CartContext);
@@ -10,6 +11,21 @@ function NavbarComponent() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const checkout = async () => {
+    await axios
+      .post("/checkout", {
+        items: cart.items,
+      })
+      .then((response) => {
+        return response.json();
+      })
+      .then((response) => {
+        if (response.url) {
+          window.location.assign(response.url); //forwarding user to stripe
+        }
+      });
+  };
 
   const productsCount = cart.items.reduce(
     (sum, product) => sum + product.quantity,
@@ -20,7 +36,7 @@ function NavbarComponent() {
     <>
       <Navbar expand="sm">
         <Navbar.Brand href="/">
-          <img src={Logo} />
+          <img src={Logo} alt="Logo" />
         </Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
@@ -48,7 +64,9 @@ function NavbarComponent() {
               ))}
               <h1>Total: {cart.getTotalCost().toFixed(2)}</h1>
 
-              <Button variant="success">Purchase Items!</Button>
+              <Button variant="success" onClick={checkout}>
+                Purchase Items!
+              </Button>
             </>
           ) : (
             <h1>There are no items in your cart!</h1>
