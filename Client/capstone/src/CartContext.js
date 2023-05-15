@@ -11,7 +11,7 @@ export const CartContext = createContext({
   getTotalCost: () => {},
 });
 
-export function CartProvider(props, { children }) {
+export function CartProvider({ products }, { children }) {
   const [cartProducts, setCartProducts] = useState([]);
 
   // stored in the cart is {id:1, quantity: 2}
@@ -87,10 +87,10 @@ export function CartProvider(props, { children }) {
   function getTotalCost() {
     let totalCost = 0;
     cartProducts.map((cartItem) => {
-      const productData = getProductData(cartItem.id, props.products);
-      totalCost += productData.price * cartItem.quantity;
+      const productData = getProductData(cartItem.id, products);
+      return (totalCost += productData.price * cartItem.quantity);
     });
-    return totalCost;
+    // return totalCost; not needed due to the return line
   }
 
   const contextValue = {
@@ -103,7 +103,9 @@ export function CartProvider(props, { children }) {
   };
 
   return (
-    <CartContext.Provider value={contextValue}>{children}</CartContext.Provider>
+    <CartContext.Provider value={contextValue} products={products}>
+      {children}
+    </CartContext.Provider>
   );
 }
 

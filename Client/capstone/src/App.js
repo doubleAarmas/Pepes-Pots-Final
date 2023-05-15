@@ -36,6 +36,7 @@ function App() {
         <Container>
           <NavbarComponent></NavbarComponent>
         </Container>
+        {/* end of bootstrap */}
         <Header />
         <Routes>
           <Route index element={<Store products={backendData} />} />
