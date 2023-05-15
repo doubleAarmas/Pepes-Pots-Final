@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "proxy": "http://localhost:8080"
   },
   "keywords": [],
   "author": "",
@@ -16,7 +17,7 @@
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "nodemon": "^2.0.22",
-    "stripe": "^12.4.0"
+    "stripe": "^12.5.0"
   },
   "devDependencies": {
     "dotenv": "^16.0.3"

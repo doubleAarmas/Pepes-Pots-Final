@@ -1,44 +1,56 @@
 [
   {
-    "id": 1,
+    "id": "price_1N6KFDJU04y3N9IDWxqQ4fF6",
     "title": "Kale Bowls",
     "image": "http://localhost:8080/images/Kale-bowl.jpeg",
+    "description": "Introducing our Kale Bowl - a simple yet sensational creation that celebrates the essence of kale in all its glory. Grown under optimal conditions, our kale is packed with vitamins, minerals, and antioxidants, making it a true nutritional powerhouse. Embrace the vibrant world of kale with our Kale Bowl, where simplicity meets nutrition.",
     "price": 15
   },
   {
-    "id": 2,
+    "id": "price_1N83j5JU04y3N9IDwh2j5lnX",
     "title": "Bok-Choy Bowls",
     "image": "http://localhost:8080/images/bok-choy-bowl.jpg",
+    "description": "Introducing our Mint Bowl - a delightful fusion of flavors and textures that will tantalize your taste buds and invigorate your senses. The fragrant mint leaves that infuse each bite with a cool and revitalizing essence are a perfect choice for those seeking a light and healthy lunch or a vibrant side dish that complements any main course.",
+
     "price": 15
   },
   {
-    "id": 3,
+    "id": "price_1N6KIsJU04y3N9IDAna73HBp",
     "title": "Lettuce Bowls",
     "image": "http://localhost:8080/images/Lettuce-bowl.jpg",
+    "description": "Introducing our Mint Bowl - a delightful fusion of flavors and textures that will tantalize your taste buds and invigorate your senses. The fragrant mint leaves that infuse each bite with a cool and revitalizing essence are a perfect choice for those seeking a light and healthy lunch or a vibrant side dish that complements any main course.",
+
     "price": 15
   },
   {
-    "id": 4,
+    "id": "price_1N83kWJU04y3N9IDw2uEJspm",
     "title": "Mint Bowls",
     "image": "http://localhost:8080/images/Mint-bowl.jpg",
+    "description": "Introducing our Mint Bowl - a delightful fusion of flavors and textures that will tantalize your taste buds and invigorate your senses. The fragrant mint leaves that infuse each bite with a cool and revitalizing essence are a perfect choice for those seeking a light and healthy lunch or a vibrant side dish that complements any main course.",
     "price": 15
   },
   {
-    "id": 5,
+    "id": "price_1N83luJU04y3N9IDuipF3H2V",
     "title": "Basil Bowls",
-    "image": "http://localhost:8080/images/Basil-Bowl.jpeg",
+    "image": "http://localhost:8080/images/Basil-Bowl.jpg",
+    "description": "Introducing our Mint Bowl - a delightful fusion of flavors and textures that will tantalize your taste buds and invigorate your senses. The fragrant mint leaves that infuse each bite with a cool and revitalizing essence are a perfect choice for those seeking a light and healthy lunch or a vibrant side dish that complements any main course.",
+
     "price": 15
   },
   {
-    "id": 6,
+    "id": "price_1N83mwJU04y3N9IDvAqRSFqq",
     "title": "Growing Bowls",
     "image": "http://localhost:8080/images/wooden-bowl.png",
-    "price": 15
+    "description": "Introducing our Mint Bowl - a delightful fusion of flavors and textures that will tantalize your taste buds and invigorate your senses. The fragrant mint leaves that infuse each bite with a cool and revitalizing essence are a perfect choice for those seeking a light and healthy lunch or a vibrant side dish that complements any main course.",
+
+    "price": 8
   },
   {
-    "id": 7,
+    "id": "price_1N83oFJU04y3N9IDSevDN2QL",
     "title": "Spinach Bowls",
     "image": "http://localhost:8080/images/spinach-bowl.jpg",
+    "description": "Introducing our Mint Bowl - a delightful fusion of flavors and textures that will tantalize your taste buds and invigorate your senses. The fragrant mint leaves that infuse each bite with a cool and revitalizing essence are a perfect choice for those seeking a light and healthy lunch or a vibrant side dish that complements any main course.",
+
     "price": 15
   }
 ]
