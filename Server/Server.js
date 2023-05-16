@@ -34,7 +34,7 @@ app.post("/checkout", async (req, res) => {
       cancel_url: "http://localhost:3000/cancel",
     });
 
-    res.json({ url: session.url }); // Send the session URL as a JSON response
+    res.send({ url: session.url }); // Send the session URL as a JSON response
   } else {
     res.status(400).send("Invalid request");
   }
