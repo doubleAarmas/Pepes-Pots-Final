@@ -33,9 +33,7 @@ function App() {
       <div>
         <BrowserRouter>
           {/* bootstrap stuff */}
-          <Container className="Navbar__Container">
-            <NavbarComponent></NavbarComponent>
-          </Container>
+          <NavbarComponent></NavbarComponent>
           <Routes>
             <Route index element={<Store />} />
             <Route path="success" element={<Success />} />
