@@ -1,11 +1,11 @@
 import React from "react";
-import "../../Styling/Hero.scss";
+import "../../Styling/FeaturedItems.scss";
 import Shopping from "../../Logos/icons8-add-shopping-cart-96.png";
 import { products } from "../ProductData/ProductData";
 
 function FeaturedItems() {
   return (
-    <section id="product1" className="section-p1">
+    <section id="product1">
       <h2>Featured Items</h2>
       <div className="product-container">
         {products.map((product) => (

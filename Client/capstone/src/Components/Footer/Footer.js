@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import "../../Styling/Footer.scss";
 import Logo from "../../Images/Branding.png";
 import Discover from "../../Logos/icons8-discover-card-67.png";
@@ -36,7 +38,9 @@ function Footer() {
 
         <div className="column">
           <h4 className="footer__subheader">About</h4>
-          <p className="footer__text">About Us</p>
+          <Link to="/about" className="footer__text">
+            About Us
+          </Link>
           <p className="footer__text">Delivery Information</p>
           <p className="footer__text">Privacy Policy</p>
           <p className="footer__text">Terms and Conditions</p>

@@ -1,7 +1,6 @@
-import "./App.css";
+import "./Styling/App.scss";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import Header from "../src/Components/Header/Header";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from "./Pages/Home";
 // bootstrap items below
@@ -34,10 +33,9 @@ function App() {
       <div>
         <BrowserRouter>
           {/* bootstrap stuff */}
-          <Container>
+          <Container className="Navbar__Container">
             <NavbarComponent></NavbarComponent>
           </Container>
-          <Header />
           <Routes>
             <Route index element={<Store />} />
             <Route path="success" element={<Success />} />
