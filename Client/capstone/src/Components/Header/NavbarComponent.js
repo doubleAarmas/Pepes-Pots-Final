@@ -16,8 +16,12 @@ function NavbarComponent() {
 
   const checkout = async () => {
     try {
+      const items = cart.items.map((currentProduct) => ({
+        price: currentProduct.id,
+        quantity: currentProduct.quantity,
+      }));
       const response = await axios.post("/checkout", {
-        items: cart.items,
+        items: items,
       });
 
       const data = response.data;
