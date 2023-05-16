@@ -21,7 +21,7 @@ function NavbarComponent() {
         quantity: currentProduct.quantity,
       }));
 
-      const response = await axios.post("/checkout", {
+      const response = await axios.post("http://localhost:8080/checkout", {
         items: items,
       });
 
