@@ -82,6 +82,8 @@ require("dotenv").config();
 const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY);
 
 app.use(cors());
+app.options("*", cors()); // Enable pre-flight request for all routes
+
 app.use(express.json());
 
 const productsList = fs.readFileSync("./Data/ProductData.json");
@@ -93,20 +95,25 @@ app.get("/products", (req, res) => {
 });
 
 app.post("/checkout", async (req, res) => {
-  const session = await stripe.checkout.sessions.create({
-    line_items: [
-      {
-        // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
-        price: "price_1N6KFDJU04y3N9IDWxqQ4fF6",
-        quantity: 1,
-      },
-    ],
-    mode: "payment",
-    success_url: "http://localhost:3000/success",
-    cancel_url: "http://localhost:3000/cancel",
-  });
+  const { items } = req.body;
 
-  res.redirect(303, session.url);
+  if (items && Array.isArray(items) && items.length > 0) {
+    const lineItems = items.map((item) => ({
+      price: item.price,
+      quantity: item.quantity,
+    }));
+
+    const session = await stripe.checkout.sessions.create({
+      line_items: lineItems,
+      mode: "payment",
+      success_url: "http://localhost:3000/success",
+      cancel_url: "http://localhost:3000/cancel",
+    });
+
+    res.redirect(303, session.url);
+  } else {
+    res.status(400).send("Invalid request");
+  }
 });
 
 app.listen(8080, () => console.log("Listening on port 8080"));
