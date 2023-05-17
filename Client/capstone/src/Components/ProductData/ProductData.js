@@ -14,7 +14,7 @@ const products = [
     image: "../../Images/Microgreens.jpg",
     description:
       "Microgreens are renowned for their exceptional nutritional value. Despite their small size, they are packed with a wide range of vitamins, minerals, and antioxidants. These nutrient-dense greens offer a concentrated dose of goodness, supporting your overall well-being and adding a healthy boost to your diet.",
-    price: 15,
+    price: 10,
   },
   {
     id: "price_1N83j5JU04y3N9IDwh2j5lnX",
