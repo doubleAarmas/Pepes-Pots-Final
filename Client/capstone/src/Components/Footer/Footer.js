@@ -44,7 +44,9 @@ function Footer() {
           <p className="footer__text">Delivery Information</p>
           <p className="footer__text">Privacy Policy</p>
           <p className="footer__text">Terms and Conditions</p>
-          <p className="footer__text">Contact Us</p>
+          <Link to="/Contact" className="footer__text">
+            Contact Us
+          </Link>
         </div>
 
         <div className="column">

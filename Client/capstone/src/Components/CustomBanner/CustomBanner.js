@@ -1,4 +1,5 @@
 import "../../Styling/CustomBanner.scss";
+import { Button } from "react-bootstrap";
 
 function CustomBanner() {
   return (
@@ -9,7 +10,9 @@ function CustomBanner() {
           Orders may take longer based on request.
         </span>
       </h2>
-      <button className="normal"> Contact Us</button>
+      <Button href="/Contact" className="nav_buttons">
+        Contact Us
+      </Button>{" "}
     </div>
   );
 }

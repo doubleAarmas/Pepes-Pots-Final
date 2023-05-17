@@ -2,7 +2,6 @@ import "./Styling/App.scss";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Home from "./Pages/Home";
 // bootstrap items below
 import NavbarComponent from "./Components/Header/NavbarComponent";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -11,6 +10,8 @@ import Cancel from "./Pages/Cancel";
 import Success from "./Pages/Success";
 import Store from "./Pages/Store";
 import CartProvider from "./CartContext";
+import Contact from "./Pages/ContactUs";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   const [backendData, setBackendData] = useState([{}]);
@@ -38,11 +39,12 @@ function App() {
             <Route index element={<Store />} />
             <Route path="success" element={<Success />} />
             <Route path="cancel" element={<Cancel />} />
+            <Route path="Contact" element={<Contact />} />
 
             {/* <Route exact path="/" element={<Navigate to="/Pepe's_Home" />} />
           <Route path="/Pepe's_Home" element={<Home />} /> */}
           </Routes>
-          {/* <Footer /> */}
+          <Footer></Footer>
         </BrowserRouter>
       </div>
     </CartProvider>

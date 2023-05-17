@@ -46,16 +46,16 @@ function NavbarComponent() {
         <Container>
           <Navbar expand="sm" className="navbar-full-width navbar-no-padding">
             <Navbar.Brand href="/">
-              <img src={Logo} alt="Logo" />
+              <img src={Logo} alt="Logo" className="logo" />
             </Navbar.Brand>
             <Navbar.Toggle />
             <Navbar.Collapse className="justify-content-end">
               <Button href="/" className="nav_buttons">
                 Home
               </Button>
-              <Button href="/about" className="nav_buttons">
+              {/* <Button href="/about" className="nav_buttons">
                 About Us
-              </Button>
+              </Button> */}
               <Button href="/Contact" className="nav_buttons">
                 Contact Us
               </Button>

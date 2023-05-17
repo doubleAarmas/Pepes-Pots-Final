@@ -21,7 +21,7 @@ const products = [
     title: "Bok-Choy Bowls",
     image: "../../Images/bok-choy-bowl.jpg",
     description:
-      "Our Bok Choy Bowl features hand-selected bok choy, carefully cultivated and harvested at the peak of freshness. Each leaf is crisp, tender, and bursting with vibrant green hues, ensuring a visual feast that's as enticing as it is nourishing. At the heart of our Bok Choy Bowl lies the commitment to purity and simplicity. We believe in letting the natural qualities of bok choy shine through, which is why our bowl contains only the finest bok choy leaves. No added ingredients or distractions—just the pure essence of bok choy.",
+      "Our Bok Choy Bowl features hand-selected bok choy, carefully cultivated and harvested at the peak of freshness. At the heart of our Bok Choy Bowl lies the commitment to purity and simplicity. We believe in letting the natural qualities of bok choy shine through, which is why our bowl contains only the finest bok choy leaves. No added ingredients or distractions—just the pure essence of bok choy. ",
 
     price: 15,
   },
@@ -30,7 +30,7 @@ const products = [
     title: "Lettuce Bowls",
     image: "../../Images/Lettuce-bowl.jpg",
     description:
-      "This bowl is a tribute to lettuce enthusiasts who appreciate the simple yet refreshing flavors that this leafy green offers. Its delicate leaves offer a satisfying crispness, creating a delightful texture that invigorates the senses.",
+      "This bowl is a tribute to lettuce enthusiasts who appreciate the simple yet refreshing flavors that this leafy green offers. Its delicate leaves offer a satisfying crispness, creating a delightful texture that invigorates the senses and is a perfect choice for those seeking a light and healthy lunch or a vibrant side dish that complements any main course.",
 
     price: 15,
   },
@@ -57,7 +57,7 @@ const products = [
     title: "Growing Bowls",
     image: require("../../Images/wooden-bowl.png"),
     description:
-      "Experience the joy of nurturing and witnessing the growth of your favorite herbs, plants, or flowers with our Growing Bowl. Its sleek and modern design effortlessly blends into any living space, adding a touch of greenery and serenity to your home or office. Whether you're a seasoned gardener or a beginner, our Growing Bowl makes it easy to indulge in the wonders of gardening without the need for a large outdoor space.",
+      "Experience the joy of nurturing and witnessing the growth of your favorite herbs, plants, or flowers with our Growing Bowl. Its sleek and modern design effortlessly blends into any living space, adding a touch of greenery and serenity to your home or office. Our Growing Bowl makes it easy to indulge in the wonders of gardening without the need for a large outdoor space.",
 
     price: 8,
   },

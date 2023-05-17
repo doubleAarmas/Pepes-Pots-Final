@@ -1,23 +1,25 @@
 import { Card, Button, Form, Row, Col } from "react-bootstrap";
 import { CartContext } from "../../CartContext";
 import { useContext } from "react";
+import "../../Styling/ProductCard.scss";
 
 function ProductCard(props) {
   //props.product is the product being sold
   const product = props.product;
   const cart = useContext(CartContext);
   const productQuantity = cart.getProductQuantity(product.id);
+
   return (
-    <Card>
-      <Card.Body>
+    <Card className="card__container">
+      <Card.Body className="card__container-inside">
         <Card.Img
           src={product.image}
           alt={product.title}
           className="product_image"
         />
-        <Card.Title>{product.title}</Card.Title>
-        <Card.Text>{product.description}</Card.Text>
-        <Card.Text>${product.price}</Card.Text>
+        <Card.Title className="card__title">{product.title}</Card.Title>
+        <Card.Text className="card__text">{product.description}</Card.Text>
+        <Card.Text className="card__price">${product.price}</Card.Text>
         {productQuantity > 0 ? (
           <>
             <Form as={Row}>

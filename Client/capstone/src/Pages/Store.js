@@ -4,7 +4,6 @@ import ProductCard from "../Components/ProductCard/ProductCard";
 import MiniHero from "../Components/miniHero/miniHero";
 import CustomBanner from "../Components/CustomBanner/CustomBanner";
 import Newsletter from "../Components/Newsletter/Newsletter";
-import Footer from "../Components/Footer/Footer";
 import "../Styling/Store.scss";
 
 function Store() {
@@ -15,7 +14,7 @@ function Store() {
           {" "}
           Featured Items!
         </h1>
-        <Row xs={1} md={3} className="g-4">
+        <Row xs={1} md={2} lg={3} className="g-4">
           {products.map((product, idx) => (
             <Col align="center" key={idx}>
               <ProductCard product={product} />
@@ -25,7 +24,6 @@ function Store() {
         <CustomBanner />
         <MiniHero />
         <Newsletter />
-        <Footer />
       </div>
     </>
   );
